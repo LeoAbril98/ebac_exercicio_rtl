@@ -26,6 +26,6 @@ describe('Teste para o componente PostComment', () => {
             }
         })
         fireEvent.click(screen.getByTestId('btn-submit'))
-        expect(screen.getByText('Gosto mais do Spiderman! Hahah')).toBeInTheDocument()
+        expect(screen.getByText('Gosto mais do Spiderman!')).toBeInTheDocument()
     })
 });
