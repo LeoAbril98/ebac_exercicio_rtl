@@ -7,25 +7,25 @@ describe('Teste para o componente PostComment', () => {
         expect(screen.getByText('Comentar')).toBeInTheDocument();
     });
 
-    test('Deve comentar "Muito massa!" nos comentários', () => {
+    test('Deve comentar "Muito legal!" nos comentários', () => {
         render(<PostComment />);
         fireEvent.change(screen.getByTestId('textarea-comment'), {
             target: {
-                value: 'Muito massa!'
+                value: 'Muito legal!'
             }
         })
         fireEvent.click(screen.getByTestId('btn-submit'))
         expect(screen.getByText('Muito massa!')).toBeInTheDocument()
     })
 
-    test('Deve comentar "Sou mais o Spiderman! Hahaha" nos comentários', () => {
+    test('Deve comentar "Gosto mais do Spiderman!" nos comentários', () => {
         render(<PostComment />);
         fireEvent.change(screen.getByTestId('textarea-comment'), {
             target: {
-                value: 'Sou mais o Spiderman! Hahah'
+                value: 'Gosto mais do Spiderman!'
             }
         })
         fireEvent.click(screen.getByTestId('btn-submit'))
-        expect(screen.getByText('Sou mais o Spiderman! Hahah')).toBeInTheDocument()
+        expect(screen.getByText('Gosto mais do Spiderman! Hahah')).toBeInTheDocument()
     })
 });
