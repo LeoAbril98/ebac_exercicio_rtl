@@ -7,11 +7,11 @@ describe('Teste para o componente PostComment', () => {
         expect(screen.getByText('Comentar')).toBeInTheDocument();
     });
 
-    test('Deve comentar "Muito legal!" nos comentários', () => {
+    test('Deve comentar "Muito massa!" nos comentários', () => {
         render(<PostComment />);
         fireEvent.change(screen.getByTestId('textarea-comment'), {
             target: {
-                value: 'Muito legal!'
+                value: 'Muito massa!'
             }
         })
         fireEvent.click(screen.getByTestId('btn-submit'))
